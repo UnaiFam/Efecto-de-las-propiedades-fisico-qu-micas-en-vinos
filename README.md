@@ -13,7 +13,7 @@ Existen procedimientos  con dioxido de azufre para controlar esta variable.
 * ***Azucar residual***: es la cantidad de azucares que queda  tras la fermentacion g/l
 * ***Cloruros***: cantidades de cloruro probenientes de de la uva junto con otras sales que son añadidas para mejorar propiedades( como AgCl) (g(NaCl)/L). 
 * ***Dioxido de Azufre total***: Estan relacionado con los sulfitos. Se usa como conservante para inhibir la oxidacion de algunos compuestos. Deben avisar si supera los 10 mg/l, erpo nor. A partir de ahora se referira a este compuesto como SO2.
-* ***Dioxido de Azufre libre***: SO2 que  que no reaccionan a  sulfitos con el tiempo (mg/L). A partir de ahora SO2 libre. [^1^](https://extension.okstate.edu/fact-sheets/understanding-free-sulfur-dioxide-fso2-in-wine.html)
+* ***Dioxido de Azufre libre***: SO2 que  que no reaccionan a  sulfitos con el tiempo (mg/L). A partir de ahora SO2 libre. [<sup>1<sup>](https://extension.okstate.edu/fact-sheets/understanding-free-sulfur-dioxide-fso2-in-wine.html)
 
 * ***Densidad***: g/L.
 * ***pH***: medida de acidez. Cuanto mas bajo, mas acido es el vino.
@@ -21,5 +21,5 @@ Existen procedimientos  con dioxido de azufre para controlar esta variable.
 * ***Alcohol***:  en vol%
   
 Y un valor de 1-10 de una cata a ciegas de la muestra.
-[^2^](https://waterhouse.ucdavis.edu/whats-in-wine/fixed-acidity)
+[<sup>2<sup>](https://waterhouse.ucdavis.edu/whats-in-wine/fixed-acidity)
 
