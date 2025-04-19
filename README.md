@@ -76,7 +76,7 @@ Como se mencionó anteriormente, una menor concentración de ácido cítrico tie
 #### Ahora acido citrico
 ![Image](https://github.com/user-attachments/assets/30b21381-4005-4f27-80fc-06d82430ac49)
 
-![Image](https://github.com/user-attachments/assets/24ab52ff-a9c1-4c76-ab40-06919e740aa8)
+![Image](https://github.com/user-attachments/assets/8b00a7ff-eb40-40ea-ae2e-2aa2ccb45438)
 
 Aquí ocurre algo similar. En las curvas se observan tres niveles definidos, sin embargo, en el histograma esta tendencia no resulta tan evidente, lo que sugiere que la muestra podría ser demasiado pequeña para confirmar este patrón con certeza. Estos “tres niveles” parecen corresponder aproximadamente a las concentraciones de 0,00; 0,25 y alrededor de 0,50.
 
