@@ -167,8 +167,7 @@ Otra duda que surge es:¿Son estos factores distintos en el vino blanco?
 |4897|6.0|0.21|0.38|0.8|0.020|22.0|98.0|0.98941|3.26|0.32|11.8|6|
 
 
-![Image](https://github.com/user-attachments/assets/b9f1f1c4-dc86-484f-8486-b9689bb3c050)
-
+![Image](https://github.com/user-attachments/assets/4c9f4581-54fe-421e-948a-a7f5c902c9b9)
 
 
 
