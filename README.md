@@ -125,3 +125,9 @@ Sin una simplificación de variables, es difícil determinar con certeza hasta q
 ![Image](https://github.com/user-attachments/assets/3afd6f83-730e-4ff7-b9f3-845b76591cf6)
 
 ![Image](https://github.com/user-attachments/assets/b511e569-30e9-48e1-b6fd-9fe3f9f9a076)
+
+Recordemos que los percentiles del ácido cítrico no serán del todo representativos, ya que la variable no sigue una distribución normal.
+Aun así, se observa que existen vinos con una concentración muy baja y otros con una concentración media, lo que sugiere la presencia de dos grupos bien diferenciados.
+
+
+
