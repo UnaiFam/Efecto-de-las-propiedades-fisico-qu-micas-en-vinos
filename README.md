@@ -23,4 +23,8 @@ Y un valor de 1-10 de una cata a ciegas de la muestra.
 [<sup>2<sup>](https://waterhouse.ucdavis.edu/whats-in-wine/fixed-acidity)
 
 
+![Image](https://github.com/user-attachments/assets/3e34c043-e178-450d-a9b6-075082afb2ca)
+
+
+
 
