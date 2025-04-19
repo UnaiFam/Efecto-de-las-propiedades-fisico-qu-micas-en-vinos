@@ -129,5 +129,25 @@ Sin una simplificación de variables, es difícil determinar con certeza hasta q
 Recordemos que los percentiles del ácido cítrico no serán del todo representativos, ya que la variable no sigue una distribución normal.
 Aun así, se observa que existen vinos con una concentración muy baja y otros con una concentración media, lo que sugiere la presencia de dos grupos bien diferenciados.
 
+|volatile acidity|citric acid|alcohol|
+|:----|:----|:----|
+|p_0|0.120|0.00|9.2|
+|p_25|0.300|0.30|10.8|
+|p_50|0.370|0.40|11.6|
+|p_75|0.490|0.49|12.2|
+|p_100|0.915|0.76|14.0|
+
+Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acidez volátil y volumen de alcohol se sitúan en torno al percentil 50 tienden a presentar una calidad aceptable.
+
+Sin embargo, es importante señalar que este análisis solo ha considerado el efecto de tres variables (acidez volátil, ácido cítrico y volumen de alcohol) sobre la calidad del vino, sin estudiar las posibles relaciones o interacciones entre ellas. En futuros analisis seria recomendable utilizar tecnicas de analisis multivariante como PCA.
+
+Además, el conjunto de datos, además de ser relativamente antiguo, presenta varias limitaciones: solo contiene datos de una única variante de vino, incluye muy pocos vinos con una calidad superior a 8, dispone de pocas muestras con una calidad de 7 o más, y no contempla otros compuestos relevantes que influyen directamente en el sabor y aroma, como polifenoles, éteres o terpenos.
+
+Finalmente aunque el efecto del sulfato en la calidad es conocido no se ha estudiado suficiente.
+
+----
+Otra duda que surge es:¿Son estos factores distintos en el vino blanco?
+
+
 
 
