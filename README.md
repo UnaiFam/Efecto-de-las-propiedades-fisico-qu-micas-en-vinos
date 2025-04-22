@@ -178,4 +178,22 @@ Curiosamente en el vino blanco los parametros relacionados con la calidad son di
 Curiosamente, los parámetros no coinciden con los del vino tinto. En ambos casos, parece valorarse positivamente un mayor contenido de alcohol y negativamente una alta acidez volátil, una densidad elevada y un alto contenido de SO₂ total.
 Sin embargo, en el vino blanco, el ácido cítrico y los sulfatos parecen tener un efecto menos significativo, mientras que los cloruros influyen en mayor medida.
 
+![Image](https://github.com/user-attachments/assets/85175319-c11d-4309-be26-74608af3a7be)
 
+En comparacion con el dataset del vino tinto, este dataset contiene outliers mas visibles, vamos a eliminarlos. 
+Se eliminaron los puntos 2781, 1526, 47451653, 1663, y 745.
+
+---
+Tras quiltar los valores anomalos no parece que haya muchos cambios.
+
+![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
+
+
+Veamos los histogramas de todos los valores
+![Image](https://github.com/user-attachments/assets/56de317f-77c7-40b4-a5dc-d79182e6aba0)
+![Image](https://github.com/user-attachments/assets/0cd8e49c-0a4a-4871-b6fd-261164cac058)
+![Image](https://github.com/user-attachments/assets/7643e66d-5b74-4531-8faa-18b3ad697934)
+
+Parece que siguen una distrbucion normal, aunque es dificl ver los detalles.
+
+![Image](https://github.com/user-attachments/assets/1ec7e841-7007-4b1a-938d-0b7e09d162a7)
