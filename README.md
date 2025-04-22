@@ -21,6 +21,7 @@ Cada dataset contiene siguientes fisico-quimicos faciles de analizar:
 Y un valor de 1-10 de una cata a ciegas de la muestra.
 [<sup>2<sup>](https://waterhouse.ucdavis.edu/whats-in-wine/fixed-acidity)
 
+Los datos estan divididos en dos datasets, vino tinto y vino blanco.
 _____
 ## Vino Tinto
 
@@ -206,6 +207,9 @@ Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sul
 
 ![Image](https://github.com/user-attachments/assets/414abc73-7c32-41d0-a8f5-090ce96f15fb)
 
+Los vinos de mayor calidad tienden a presentar un menor contenido de azúcar residual. Este resultado es coherente, ya que un alto contenido de alcohol suele estar asociado a una mejor calidad, y, a su vez, a una menor cantidad de azúcar residual.
+
+Además, parece que, independientemente de la calidad, las muestras se agrupan en torno a tres niveles bien diferenciados de concentración.
 
 #### Ácido cítrico
 
@@ -213,13 +217,14 @@ Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sul
 
 ![Image](https://github.com/user-attachments/assets/f4fcb4ed-0f42-46dd-87c9-905be0639d73)
 
-
+Los vinos de mayor calidad muestran una menor dispersión en sus valores. Al igual que ocurre con el azúcar residual, las muestras parecen agruparse en torno a tres niveles diferenciados, aunque esta tendencia podría deberse a la falta de muestras suficientes para confirmar el patrón con certeza.
 #### Alcohol
 
 ![Image](https://github.com/user-attachments/assets/58907b38-b604-4f99-8855-fb516dfaf7d3)
 
 ![Image](https://github.com/user-attachments/assets/e2869177-d6c8-4d29-81b6-35f67e6aa7a3)
 
+De forma similar al conjunto de datos del vino tinto, los vinos de mayor calidad tienden a presentar un contenido de alcohol más elevado, aunque sus valores están más dispersos.
 
 #### Densidad
 
