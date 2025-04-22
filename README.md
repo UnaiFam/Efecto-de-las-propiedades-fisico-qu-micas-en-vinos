@@ -51,7 +51,7 @@ Ahora veamos cuales de estas propiedades se relacionan entre si:
 
 La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas interesantes, vamos a estudiarlas mas de cerca.
 
-Nos centraremos en la calidad:
+Nos centraremos en la calidad con cut-off de 0.15:
 * Negativamente Acidez volatil (-0.39)
 * Acido citrico(0.23)
 * Negativamente con al SO2 total(-0.19)
@@ -168,7 +168,95 @@ Otra duda que surge es:¿Son estos factores distintos en el vino blanco?
 
 ![Image](https://github.com/user-attachments/assets/4c9f4581-54fe-421e-948a-a7f5c902c9b9)
 
+Curiosamente en el vino blanco los parametros relacionados con la calidad son distintos.
+* Acidez volatil (-0.19)
+* Cloruros (-0.21)
+* SO2 total (-0.17)
+* Densidad (-0.31)
+* Alcohol (0.44)
+* 
+Curiosamente, los parámetros no coinciden con los del vino tinto. En ambos casos, parece valorarse positivamente un mayor contenido de alcohol y negativamente una alta acidez volátil, una densidad elevada y un alto contenido de SO₂ total.
+Sin embargo, en el vino blanco, el ácido cítrico y los sulfatos parecen tener un efecto menos significativo, mientras que los cloruros influyen en mayor medida.
+
+![Image](https://github.com/user-attachments/assets/85175319-c11d-4309-be26-74608af3a7be)
+
+En comparacion con el dataset del vino tinto, este dataset contiene outliers mas visibles, vamos a eliminarlos. 
+Se eliminaron los puntos 2781, 1526, 47451653, 1663, y 745.
+
+---
+Tras quiltar los valores anomalos no parece que haya muchos cambios.
+
+![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
+
+
+Veamos los histogramas de todos los valores
+![Image](https://github.com/user-attachments/assets/56de317f-77c7-40b4-a5dc-d79182e6aba0)
+![Image](https://github.com/user-attachments/assets/0cd8e49c-0a4a-4871-b6fd-261164cac058)
+![Image](https://github.com/user-attachments/assets/7643e66d-5b74-4531-8faa-18b3ad697934)
+
+Parece que siguen una distrbucion normal, aunque es dificl ver los detalles.
+
+![Image](https://github.com/user-attachments/assets/1ec7e841-7007-4b1a-938d-0b7e09d162a7)
+
+En este conjunto de datos se observan de forma muy clara algunas correlaciones, como la del pH con la acidez fija o la de la densidad con el azúcar residual 
+Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sulfatos resultan especialmente interesantes, por lo que vamos a analizarlas con mayor detalle.
+
+#### Azúcar residual
+![Image](https://github.com/user-attachments/assets/1dfac6bc-83c3-46a2-8f70-9506b52da3f7)
+
+![Image](https://github.com/user-attachments/assets/414abc73-7c32-41d0-a8f5-090ce96f15fb)
+
+
+#### Ácido cítrico
+
+![Image](https://github.com/user-attachments/assets/411475e2-8f0d-45b0-84e1-980658442172)
+
+![Image](https://github.com/user-attachments/assets/f4fcb4ed-0f42-46dd-87c9-905be0639d73)
+
+
+#### Alcohol
+
+![Image](https://github.com/user-attachments/assets/58907b38-b604-4f99-8855-fb516dfaf7d3)
+
+![Image](https://github.com/user-attachments/assets/e2869177-d6c8-4d29-81b6-35f67e6aa7a3)
+
+
+#### Densidad
+
+![Image](https://github.com/user-attachments/assets/255193f1-a8af-4640-adcf-08d14d9a8326)
+![Image](https://github.com/user-attachments/assets/7f73667e-5952-430d-b15b-083f10e12d67)
+
+
+---
+
+
+![Image](https://github.com/user-attachments/assets/061ba52c-e227-487b-90bd-b800bb7a987f)
+
+Hay demasiados datos muy dispersos. Vamos a filtrarlos a partir del 7.
+
+
+![Image](https://github.com/user-attachments/assets/71b87556-89a9-4939-9fca-a890c61ebe4a)
+
+Parece que la mayoria esta en la zona central. Podemos estimar una zona donde la calidad sea alta.
 
 
 
+|volatile acidity|	citric acid|	alcohol|	sulphates|	chlorides|
+-----------------|-------------|-----------|-------------|-----------|
+p_0|	0.08|	0.01|	8.5|	0.22|	0.012|
+p_25|	0.19|	0.28|	10.7|	0.40|	0.031|
+p_50|	0.25|	0.31|	11.5|	0.48|	0.037|
+p_75|	0.32|	0.36|	12.4|	0.58|	0.044|
+p_100|	0.76|	0.74|	14.2|	1.08|	0.135|
+
+
+El ácido cítrico y el alcohol presentan concentraciones bastante similares, mientras que los sulfatos y la acidez volátil muestran valores más bajos en comparación.
+
+La mayoría de estas variables exhiben distribuciones que se aproximan a una distribución normal, lo que permite estimar sus percentiles con mayor fiabilidad en comparación con el dataset anterior.
+
+No obstante, los histogramas revelan que este conjunto de datos contiene un mayor número de muestras que se sitúan fuera de los límites habituales.
+
+Al igual que en el dataset anterior, se observa que hay pocas muestras correspondientes a vinos de alta calidad. Cabe destacar que este análisis sigue siendo univariante, es decir, no considera las relaciones o interacciones entre variables, un aspecto que debería abordarse en futuros análisis.
+
+A pesar de ello, este conjunto de datos cuenta con un número de muestras significativamente mayor, lo que podría permitir obtener resultados más robustos.
 
