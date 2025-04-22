@@ -67,7 +67,6 @@ Por el contrario, los ácidos volátiles, el dióxido de azufre (SO₂) y una ba
 
 La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas interesantes, vamos a estudiarlas mas de cerca.
 
-
 #### Primero acidez volatil
 
 ![Image](https://github.com/user-attachments/assets/6095ff29-7dd0-4485-b562-82b0904c0273)
