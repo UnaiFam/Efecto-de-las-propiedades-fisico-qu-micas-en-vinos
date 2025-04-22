@@ -21,6 +21,7 @@ Cada dataset contiene siguientes fisico-quimicos faciles de analizar:
 Y un valor de 1-10 de una cata a ciegas de la muestra.
 [<sup>2<sup>](https://waterhouse.ucdavis.edu/whats-in-wine/fixed-acidity)
 
+Se ha estudiado el eefecto de estas variables en la calidad en el [vino tinto](## Vino Tinto) y en [vino blanco](## Vino Blanco)
 _____
 ## Vino Tinto
 
