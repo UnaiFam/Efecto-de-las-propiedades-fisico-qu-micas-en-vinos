@@ -200,13 +200,14 @@ Parece que siguen una distrbucion normal, aunque es dificl ver los detalles.
 
 En este conjunto de datos se observan de forma muy clara algunas correlaciones, como la del pH con la acidez fija o la de la densidad con el azúcar residual 
 Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sulfatos resultan especialmente interesantes, por lo que vamos a analizarlas con mayor detalle.
-#### Azucar residual
+
+#### Azúcar residual
 ![Image](https://github.com/user-attachments/assets/1dfac6bc-83c3-46a2-8f70-9506b52da3f7)
 
 ![Image](https://github.com/user-attachments/assets/414abc73-7c32-41d0-a8f5-090ce96f15fb)
 
 
-#### Acido citrico
+#### Ácido cítrico
 
 ![Image](https://github.com/user-attachments/assets/411475e2-8f0d-45b0-84e1-980658442172)
 
@@ -232,7 +233,10 @@ Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sul
 ![Image](https://github.com/user-attachments/assets/061ba52c-e227-487b-90bd-b800bb7a987f)
 
 Hay demasiados datos muy dispersos. Vamos a filtrarlos a partir del 7.
+
+
 ![Image](https://github.com/user-attachments/assets/71b87556-89a9-4939-9fca-a890c61ebe4a)
+
 Parece que la mayoria esta en la zona central. Podemos estimar una zona donde la calidad sea alta.
 
 
@@ -246,5 +250,13 @@ p_75|	0.32|	0.36|	12.4|	0.58|	0.044|
 p_100|	0.76|	0.74|	14.2|	1.08|	0.135|
 
 
+El ácido cítrico y el alcohol presentan concentraciones bastante similares, mientras que los sulfatos y la acidez volátil muestran valores más bajos en comparación.
 
+La mayoría de estas variables exhiben distribuciones que se aproximan a una distribución normal, lo que permite estimar sus percentiles con mayor fiabilidad en comparación con el dataset anterior.
+
+No obstante, los histogramas revelan que este conjunto de datos contiene un mayor número de muestras que se sitúan fuera de los límites habituales.
+
+Al igual que en el dataset anterior, se observa que hay pocas muestras correspondientes a vinos de alta calidad. Cabe destacar que este análisis sigue siendo univariante, es decir, no considera las relaciones o interacciones entre variables, un aspecto que debería abordarse en futuros análisis.
+
+A pesar de ello, este conjunto de datos cuenta con un número de muestras significativamente mayor, lo que podría permitir obtener resultados más robustos.
 
