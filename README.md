@@ -51,7 +51,7 @@ Ahora veamos cuales de estas propiedades se relacionan entre si:
 
 La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas interesantes, vamos a estudiarlas mas de cerca.
 
-Nos centraremos en la calidad:
+Nos centraremos en la calidad con cut-off de 0.15:
 * Negativamente Acidez volatil (-0.39)
 * Acido citrico(0.23)
 * Negativamente con al SO2 total(-0.19)
@@ -168,7 +168,14 @@ Otra duda que surge es:¿Son estos factores distintos en el vino blanco?
 
 ![Image](https://github.com/user-attachments/assets/4c9f4581-54fe-421e-948a-a7f5c902c9b9)
 
-
-
+Curiosamente en el vino blanco los parametros relacionados con la calidad son distintos.
+* Acidez volatil (-0.19)
+* Cloruros (-0.21)
+* SO2 total (-0.17)
+* Densidad (-0.31)
+* Alcohol (0.44)
+* 
+Curiosamente, los parámetros no coinciden con los del vino tinto. En ambos casos, parece valorarse positivamente un mayor contenido de alcohol y negativamente una alta acidez volátil, una densidad elevada y un alto contenido de SO₂ total.
+Sin embargo, en el vino blanco, el ácido cítrico y los sulfatos parecen tener un efecto menos significativo, mientras que los cloruros influyen en mayor medida.
 
 
