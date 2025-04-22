@@ -197,3 +197,54 @@ Veamos los histogramas de todos los valores
 Parece que siguen una distrbucion normal, aunque es dificl ver los detalles.
 
 ![Image](https://github.com/user-attachments/assets/1ec7e841-7007-4b1a-938d-0b7e09d162a7)
+
+En este conjunto de datos se observan de forma muy clara algunas correlaciones, como la del pH con la acidez fija o la de la densidad con el azúcar residual 
+Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sulfatos resultan especialmente interesantes, por lo que vamos a analizarlas con mayor detalle.
+#### Azucar residual
+![Image](https://github.com/user-attachments/assets/1dfac6bc-83c3-46a2-8f70-9506b52da3f7)
+
+![Image](https://github.com/user-attachments/assets/414abc73-7c32-41d0-a8f5-090ce96f15fb)
+
+
+#### Acido citrico
+
+![Image](https://github.com/user-attachments/assets/411475e2-8f0d-45b0-84e1-980658442172)
+
+![Image](https://github.com/user-attachments/assets/f4fcb4ed-0f42-46dd-87c9-905be0639d73)
+
+
+#### Alcohol
+
+![Image](https://github.com/user-attachments/assets/58907b38-b604-4f99-8855-fb516dfaf7d3)
+
+![Image](https://github.com/user-attachments/assets/e2869177-d6c8-4d29-81b6-35f67e6aa7a3)
+
+
+#### Densidad
+
+![Image](https://github.com/user-attachments/assets/255193f1-a8af-4640-adcf-08d14d9a8326)
+![Image](https://github.com/user-attachments/assets/7f73667e-5952-430d-b15b-083f10e12d67)
+
+
+---
+
+
+![Image](https://github.com/user-attachments/assets/061ba52c-e227-487b-90bd-b800bb7a987f)
+
+Hay demasiados datos muy dispersos. Vamos a filtrarlos a partir del 7.
+![Image](https://github.com/user-attachments/assets/71b87556-89a9-4939-9fca-a890c61ebe4a)
+Parece que la mayoria esta en la zona central. Podemos estimar una zona donde la calidad sea alta.
+
+
+
+|volatile acidity|	citric acid|	alcohol|	sulphates|	chlorides|
+-----------------|-------------|-----------|-------------|-----------|
+p_0|	0.08|	0.01|	8.5|	0.22|	0.012|
+p_25|	0.19|	0.28|	10.7|	0.40|	0.031|
+p_50|	0.25|	0.31|	11.5|	0.48|	0.037|
+p_75|	0.32|	0.36|	12.4|	0.58|	0.044|
+p_100|	0.76|	0.74|	14.2|	1.08|	0.135|
+
+
+
+
