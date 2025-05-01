@@ -99,6 +99,7 @@ Parece que los vinos de calidad inferior presentan una mayor variabilidad en la 
 
 
 -------
+#### Todos los las variables
 Ahora veamos como se relacionan los tres a la vez.
 
 ![Image](https://github.com/user-attachments/assets/c040b7a1-4f4f-48b7-a29b-e8c68cabfd7a)
@@ -107,9 +108,6 @@ Ahora veamos como se relacionan los tres a la vez.
 Hay demasiados vinos de baja calidad eclipsando la grafica.
 Filtramos para solo ver los  vinos de maxima calidad:
 
-![Image](https://github.com/user-attachments/assets/f2d4b960-797c-4741-9664-28f3abc2ee92)
-
-Aunque que se vean de forma clara son datos demasiado dispersos y escasos como para ver una tendencia clara.
 ![Image](https://github.com/user-attachments/assets/e75418f3-2478-4f60-b2d9-107f4e4423e5)
 
 Los datos siguen siendo dispersos, pero las tendencias ahora son más claras y no se observan outliers. Parece que se pueden identificar dos grupos:
@@ -142,11 +140,31 @@ Aun así, se observa que existen vinos con una concentración muy baja y otros c
 
 Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acidez volátil y volumen de alcohol se sitúan en torno al percentil 50 tienden a presentar una calidad aceptable.
 
-Sin embargo, es importante señalar que este análisis solo ha considerado el efecto de tres variables (acidez volátil, ácido cítrico y volumen de alcohol) sobre la calidad del vino, sin estudiar las posibles relaciones o interacciones entre ellas. En futuros analisis seria recomendable utilizar tecnicas de analisis multivariante como PCA.
+
+
+Finalmente aunque el efecto del sulfato en la calidad es conocido no se ha estudiado suficiente.
+
+---
+## Conclusiones 
+
+Todos los acidos y el pH estan estrechamente relacionado entre si.
+
+La calidad depende esta relacionada alcohol y la concentración de ácido cítrico en el vino. Además, una mayor concentración de sulfatos también se asocia con una mejor calidad percibida.
+Por el contrario, los ácidos volátiles, el dióxido de azufre (SO₂) y una baja densidad presentan una correlación negativa con la calidad.
+
+Tambien se ha estudiado la concetracion optima de las 4 variables:
+* ácido cítrico, 
+* acidez volátil
+* volumen de alcohol
+* Sulfatos
+
+Es importante señalar que este análisis solo ha considerado el efecto de tres variables (acidez volátil, ácido cítrico y volumen de alcohol) sobre la calidad del vino, sin estudiar las posibles relaciones o interacciones entre ellas. Realisticamente todas las variables y la relacion de estas afectarian a la calidad. En futuros analisis seria recomendable utilizar tecnicas de analisis multivariante como PCA.
 
 Además, el conjunto de datos, además de ser relativamente antiguo, presenta varias limitaciones: solo contiene datos de una única variante de vino, incluye muy pocos vinos con una calidad superior a 8, dispone de pocas muestras con una calidad de 7 o más, y no contempla otros compuestos relevantes que influyen directamente en el sabor y aroma, como polifenoles, éteres o terpenos.
 
-Finalmente aunque el efecto del sulfato en la calidad es conocido no se ha estudiado suficiente.
+Estas conclusiones solo se aplicarian a este dataset, ya que por ejemplo en un dataset del vino blanco (mas adelante) se bservo diferentes correlaciones (como por ejemplo una mayor importancia en de los cloruros y del SO2 libre y que el acido citrico no tenga impotancia directa)
+
+![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
 
 ----
 ## Vino Blanco
