@@ -23,23 +23,8 @@ Y un valor de 1-10 de una cata a ciegas de la muestra.
 
 Los datos estan divididos en dos datasets, vino tinto y vino blanco.
 _____
-## Vino Tinto
-
-Primero estudiaremos el dataset del vino tinto.
-| |fixed acidity|volatile acidity|citric acid|residual sugar|chlorides|free sulfur dioxide|total sulfur dioxide|density|pH|sulphates|alcohol|quality|
-|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-|0|7.4|0.700|0.00|1.9|0.076|11.0|34.0|0.99780|3.51|0.56|9.4|5|
-|1|7.8|0.880|0.00|2.6|0.098|25.0|67.0|0.99680|3.20|0.68|9.8|5|
-|2|7.8|0.760|0.04|2.3|0.092|15.0|54.0|0.99700|3.26|0.65|9.8|5|
-|3|11.2|0.280|0.56|1.9|0.075|17.0|60.0|0.99800|3.16|0.58|9.8|6|
-|4|7.4|0.700|0.00|1.9|0.076|11.0|34.0|0.99780|3.51|0.56|9.4|5|
-|...|...|...|...|...|...|...|...|...|...|...|...|...|
-|1594|6.2|0.600|0.08|2.0|0.090|32.0|44.0|0.99490|3.45|0.58|10.5|5|
-|1595|5.9|0.550|0.10|2.2|0.062|39.0|51.0|0.99512|3.52|0.76|11.2|6|
-|1596|6.3|0.510|0.13|2.3|0.076|29.0|40.0|0.99574|3.42|0.75|11.0|6|
-|1597|5.9|0.645|0.12|2.0|0.075|32.0|44.0|0.99547|3.57|0.71|10.2|5|
-|1598|6.0|0.310|0.47|3.6|0.067|18.0|42.0|0.99549|3.39|0.66|11.0|6|
-
+## **Vino Tinto**
+Para este analisis estudiaremos principalmente el dataset de vino tinto
 
 ![Image](https://github.com/user-attachments/assets/3e34c043-e178-450d-a9b6-075082afb2ca)
 ![Image](https://github.com/user-attachments/assets/7c1f6695-fef0-492d-b039-bc89373d40a6)
@@ -50,18 +35,15 @@ Ahora veamos cuales de estas propiedades se relacionan entre si:
 
 ![Image](https://github.com/user-attachments/assets/5357227b-f5f4-43ae-b57a-89f4ec2ec3bd)
 
-La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas interesantes, vamos a estudiarlas mas de cerca.
+* El pH esta relacionado estrechamente con la acidez fija (negativamente),  acidez volatil (positivamente), acido citrico (negativamente) ademas de entre si. Esto tienen mucho sentido ya que son variables que miden acidos. Tambien tiene sentido que esten relacionados poruqe tengan los mismos reacctivos. 
 
-Nos centraremos en la calidad con cut-off de 0.15:
-* Negativamente Acidez volatil (-0.39)
-* Acido citrico(0.23)
-* Negativamente con al SO2 total(-0.19)
-* Negativamente con la densidad(-0.17)
-* Sulfatos (0.25)
-* Alcohol(0.48)
-    
-Parece que los expertos valoran especialmente el contenido de alcohol y la concentración de ácido cítrico en el vino. Además, una mayor concentración de sulfatos también se asocia con una mejor calidad percibida.
-Por el contrario, los ácidos volátiles, el dióxido de azufre (SO₂) y una baja densidad presentan una correlación negativa con la calidad.
+* Tiene sentido que la densidad este muy relacionada con el contenido de alcohol(ya que el alcohol tiene una densidad menor que el agua), y que el resto de variables aumenten la densidad.
+
+* Tambien tiene sentido que los vino que tengan mas acidos volatiles tengan menos alcohol. Podria ser que que los acidos volatiles no se hayan tranformado al completo se formen a  partir del alchol. Aunque lo mas probabe es que los acidos provienen del alcohol.
+
+* Parece que los consumidores valoran especialmente el contenido de alcohol (0.48) y la concentración de ácido cítrico (0.23) en el vino. Además, una mayor concentración de sulfatos (0.25) también se asocia con una mejor calidad percibida.
+Por el contrario, los ácidos volátiles(-0.39) (posiblemnente porque este relacionado con olores desagradables), el SO2 (-0.19)(demasiados conservantes) y una baja densidad(-0.17) (sensacion de "vino aguado" o demasiado fuerte) presentan una correlación negativa con la calidad.
+
 
 
 ![Image](https://github.com/user-attachments/assets/7edcb241-01ff-4452-a275-b184efe6615a)
@@ -74,7 +56,7 @@ La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas intere
 
 ![Image](https://github.com/user-attachments/assets/1d9e09b9-a8e2-473d-a679-7b7bb1eba1a7)
 
-Como se mencionó anteriormente, una menor concentración de ácido cítrico tiende a asociarse con una mayor calidad del vino. Sin embargo, las curvas mostraron que, independientemente de la calidad, las concentraciones suelen agruparse en torno a tres valores principales. Esta tendencia se observa de forma más clara y evidente en el histograma.
+Como se mencionó anteriormente, una menor concentración de ácido cítrico tiende a asociarse con una mayor calidad del vino. Sin embargo, las curvas mostraron que, independientemente de la calidad, las concentraciones suelen agruparse en torno a tres valores principales. Esta tendencia se observa de forma más clara y evidente en el histograma. Esto quiere decir que se podria estimar una concentracion optima.
 
 #### Ahora acido citrico
 ![Image](https://github.com/user-attachments/assets/30b21381-4005-4f27-80fc-06d82430ac49)
@@ -99,7 +81,7 @@ Parece que los vinos de calidad inferior presentan una mayor variabilidad en la 
 
 
 -------
-#### Todos los las variables
+#### **Todos los las variables**
 Ahora veamos como se relacionan los tres a la vez.
 
 ![Image](https://github.com/user-attachments/assets/c040b7a1-4f4f-48b7-a29b-e8c68cabfd7a)
@@ -117,35 +99,42 @@ Los datos siguen siendo dispersos, pero las tendencias ahora son más claras y n
 
 Sin una simplificación de variables, es difícil determinar con certeza hasta qué punto estas tendencias son reales. Ahora, vamos a estudiar las distribuciones de los datos.
 
-(Agruparemos las variables de ácido cítrico y acidez volátil para ahorrar espacio).
+### **Estimación de la cocentración optima**
 
 
-![Image](https://github.com/user-attachments/assets/2333e0f1-9048-4ced-a622-5bcc869c4aef)
+|                      | statistic  | pvalue        |
+|----------------------|------------|---------------|
+| fixed acidity        | 8.350177   | 1.537383e-02  |
+| volatile acidity     | 32.004587  | 1.122774e-07  |
+| citric acid          | 7.388273   | 2.486892e-02  |
+| residual sugar       | 103.852678 | 2.809813e-23  |
+| chlorides            | 266.871920 | 1.120725e-58  |
+| free sulfur dioxide  | 65.491076  | 6.008879e-15  |
+| total sulfur dioxide | 56.227478  | 6.171040e-13  |
+| density              | 3.824202   | 1.477696e-01  |
+| pH                   | 8.940140   | 1.144651e-02  |
+| sulphates            | 28.121259  | 7.826113e-07  |
+| alcohol              | 1.984523   | 3.707373e-01  |
+| quality              | 149.058290 | 4.289470e-33  | 
+
+Considerando una significancia del 5% , ninguna variable tiene una distribución normal excepto alcohol, y la densidad. 
+Aunque se puedan calcular los percentiles, al no tener una  una distribucion normal, la fiabilidad de estos queda en duda. 
 
 
-![Image](https://github.com/user-attachments/assets/3afd6f83-730e-4ff7-b9f3-845b76591cf6)
-
-![Image](https://github.com/user-attachments/assets/b511e569-30e9-48e1-b6fd-9fe3f9f9a076)
-
-Recordemos que los percentiles del ácido cítrico no serán del todo representativos, ya que la variable no sigue una distribución normal.
-Aun así, se observa que existen vinos con una concentración muy baja y otros con una concentración media, lo que sugiere la presencia de dos grupos bien diferenciados.
-
-|volatile acidity|citric acid|alcohol|
-|:----|:----|:----|
-|p_0|0.120|0.00|9.2|
-|p_25|0.300|0.30|10.8|
-|p_50|0.370|0.40|11.6|
-|p_75|0.490|0.49|12.2|
-|p_100|0.915|0.76|14.0|
-
-Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acidez volátil y volumen de alcohol se sitúan en torno al percentil 50 tienden a presentar una calidad aceptable.
+|volatile acidity|citric acid|alcohol|sulphates|
+|:----|:----|:----|:----|
+|p_0|0.120|0.00|9.2|0.390|
+|p_25|0.300|0.30|10.8|0.655|
+|p_50|0.370|0.40|11.6|0.740|
+|p_75|0.490|0.49|12.2|0.825|
+|p_100|0.915|0.76|14.0|1.360|
 
 
 
-Finalmente aunque el efecto del sulfato en la calidad es conocido no se ha estudiado suficiente.
+Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acidez volátil, sulfato y volumen de alcohol se sitúan en torno al percentil 50 tienden a presentar una calidad aceptable.
 
 ---
-## Conclusiones 
+## **Conclusiones** 
 
 Todos los acidos y el pH estan estrechamente relacionado entre si.
 
@@ -153,133 +142,15 @@ La calidad depende esta relacionada alcohol y la concentración de ácido cítri
 Por el contrario, los ácidos volátiles, el dióxido de azufre (SO₂) y una baja densidad presentan una correlación negativa con la calidad.
 
 Tambien se ha estudiado la concetracion optima de las 4 variables:
-* ácido cítrico, 
-* acidez volátil
-* volumen de alcohol
+* Ácido cítrico
+* Acidez volátil
+* Volumen de alcohol
 * Sulfatos
 
 Es importante señalar que este análisis solo ha considerado el efecto de tres variables (acidez volátil, ácido cítrico y volumen de alcohol) sobre la calidad del vino, sin estudiar las posibles relaciones o interacciones entre ellas. Realisticamente todas las variables y la relacion de estas afectarian a la calidad. En futuros analisis seria recomendable utilizar tecnicas de analisis multivariante como PCA.
 
 Además, el conjunto de datos, además de ser relativamente antiguo, presenta varias limitaciones: solo contiene datos de una única variante de vino, incluye muy pocos vinos con una calidad superior a 8, dispone de pocas muestras con una calidad de 7 o más, y no contempla otros compuestos relevantes que influyen directamente en el sabor y aroma, como polifenoles, éteres o terpenos.
 
-Estas conclusiones solo se aplicarian a este dataset, ya que por ejemplo en un dataset del vino blanco (mas adelante) se bservo diferentes correlaciones (como por ejemplo una mayor importancia en de los cloruros y del SO2 libre y que el acido citrico no tenga impotancia directa)
+Estas conclusiones solo se aplicarian a este dataset, ya que por ejemplo en el dataset del vino blanco (mas adelante) se observo diferentes correlaciones (como por ejemplo una mayor importancia en de los cloruros y del SO2 libre y que el acido citrico no tenga impotancia directa)
 
 ![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
-
-----
-## Vino Blanco
-Otra duda que surge es:¿Son estos factores distintos en el vino blanco?
-
-|fixed acidity|volatile acidity|citric acid|residual sugar|chlorides|free sulfur dioxide|total sulfur dioxide|density|pH|sulphates|alcohol|quality|
-|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-|0|7.0|0.27|0.36|20.7|0.045|45.0|170.0|1.00100|3.00|0.45|8.8|6|
-|1|6.3|0.30|0.34|1.6|0.049|14.0|132.0|0.99400|3.30|0.49|9.5|6|
-|2|8.1|0.28|0.40|6.9|0.050|30.0|97.0|0.99510|3.26|0.44|10.1|6|
-|3|7.2|0.23|0.32|8.5|0.058|47.0|186.0|0.99560|3.19|0.40|9.9|6|
-|4|7.2|0.23|0.32|8.5|0.058|47.0|186.0|0.99560|3.19|0.40|9.9|6|
-|...|...|...|...|...|...|...|...|...|...|...|...|...|
-|4893|6.2|0.21|0.29|1.6|0.039|24.0|92.0|0.99114|3.27|0.50|11.2|6|
-|4894|6.6|0.32|0.36|8.0|0.047|57.0|168.0|0.99490|3.15|0.46|9.6|5|
-|4895|6.5|0.24|0.19|1.2|0.041|30.0|111.0|0.99254|2.99|0.46|9.4|6|
-|4896|5.5|0.29|0.30|1.1|0.022|20.0|110.0|0.98869|3.34|0.38|12.8|7|
-|4897|6.0|0.21|0.38|0.8|0.020|22.0|98.0|0.98941|3.26|0.32|11.8|6|
-
-
-![Image](https://github.com/user-attachments/assets/4c9f4581-54fe-421e-948a-a7f5c902c9b9)
-
-Curiosamente en el vino blanco los parametros relacionados con la calidad son distintos.
-* Acidez volatil (-0.19)
-* Cloruros (-0.21)
-* SO2 total (-0.17)
-* Densidad (-0.31)
-* Alcohol (0.44)
-* 
-Curiosamente, los parámetros no coinciden con los del vino tinto. En ambos casos, parece valorarse positivamente un mayor contenido de alcohol y negativamente una alta acidez volátil, una densidad elevada y un alto contenido de SO₂ total.
-Sin embargo, en el vino blanco, el ácido cítrico y los sulfatos parecen tener un efecto menos significativo, mientras que los cloruros influyen en mayor medida.
-
-![Image](https://github.com/user-attachments/assets/85175319-c11d-4309-be26-74608af3a7be)
-
-En comparacion con el dataset del vino tinto, este dataset contiene outliers mas visibles, vamos a eliminarlos. 
-Se eliminaron los puntos 2781, 1526, 47451653, 1663, y 745.
-
----
-Tras quiltar los valores anomalos no parece que haya muchos cambios.
-
-![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
-
-
-Veamos los histogramas de todos los valores
-![Image](https://github.com/user-attachments/assets/56de317f-77c7-40b4-a5dc-d79182e6aba0)
-![Image](https://github.com/user-attachments/assets/0cd8e49c-0a4a-4871-b6fd-261164cac058)
-![Image](https://github.com/user-attachments/assets/7643e66d-5b74-4531-8faa-18b3ad697934)
-
-Parece que siguen una distrbucion normal, aunque es dificl ver los detalles.
-
-![Image](https://github.com/user-attachments/assets/1ec7e841-7007-4b1a-938d-0b7e09d162a7)
-
-En este conjunto de datos se observan de forma muy clara algunas correlaciones, como la del pH con la acidez fija o la de la densidad con el azúcar residual 
-Las distribuciones de azúcar residual, ácido cítrico, alcohol, densidad y sulfatos resultan especialmente interesantes, por lo que vamos a analizarlas con mayor detalle.
-
-#### Azúcar residual
-![Image](https://github.com/user-attachments/assets/1dfac6bc-83c3-46a2-8f70-9506b52da3f7)
-
-![Image](https://github.com/user-attachments/assets/414abc73-7c32-41d0-a8f5-090ce96f15fb)
-
-Los vinos de mayor calidad tienden a presentar un menor contenido de azúcar residual. Este resultado es coherente, ya que un alto contenido de alcohol suele estar asociado a una mejor calidad, y, a su vez, a una menor cantidad de azúcar residual.
-
-Además, parece que, independientemente de la calidad, las muestras se agrupan en torno a tres niveles bien diferenciados de concentración.
-
-#### Ácido cítrico
-
-![Image](https://github.com/user-attachments/assets/411475e2-8f0d-45b0-84e1-980658442172)
-
-![Image](https://github.com/user-attachments/assets/f4fcb4ed-0f42-46dd-87c9-905be0639d73)
-
-Los vinos de mayor calidad muestran una menor dispersión en sus valores. Al igual que ocurre con el azúcar residual, las muestras parecen agruparse en torno a tres niveles diferenciados, aunque esta tendencia podría deberse a la falta de muestras suficientes para confirmar el patrón con certeza.
-#### Alcohol
-
-![Image](https://github.com/user-attachments/assets/58907b38-b604-4f99-8855-fb516dfaf7d3)
-
-![Image](https://github.com/user-attachments/assets/e2869177-d6c8-4d29-81b6-35f67e6aa7a3)
-
-De forma similar al conjunto de datos del vino tinto, los vinos de mayor calidad tienden a presentar un contenido de alcohol más elevado, aunque sus valores están más dispersos.
-
-#### Densidad
-
-![Image](https://github.com/user-attachments/assets/255193f1-a8af-4640-adcf-08d14d9a8326)
-![Image](https://github.com/user-attachments/assets/7f73667e-5952-430d-b15b-083f10e12d67)
-
-
----
-
-
-![Image](https://github.com/user-attachments/assets/061ba52c-e227-487b-90bd-b800bb7a987f)
-
-Hay demasiados datos muy dispersos. Vamos a filtrarlos a partir del 7.
-
-
-![Image](https://github.com/user-attachments/assets/71b87556-89a9-4939-9fca-a890c61ebe4a)
-
-Parece que la mayoria esta en la zona central. Podemos estimar una zona donde la calidad sea alta.
-
-
-
-|volatile acidity|	citric acid|	alcohol|	sulphates|	chlorides|
------------------|-------------|-----------|-------------|-----------|
-p_0|	0.08|	0.01|	8.5|	0.22|	0.012|
-p_25|	0.19|	0.28|	10.7|	0.40|	0.031|
-p_50|	0.25|	0.31|	11.5|	0.48|	0.037|
-p_75|	0.32|	0.36|	12.4|	0.58|	0.044|
-p_100|	0.76|	0.74|	14.2|	1.08|	0.135|
-
-
-El ácido cítrico y el alcohol presentan concentraciones bastante similares, mientras que los sulfatos y la acidez volátil muestran valores más bajos en comparación.
-
-La mayoría de estas variables exhiben distribuciones que se aproximan a una distribución normal, lo que permite estimar sus percentiles con mayor fiabilidad en comparación con el dataset anterior.
-
-No obstante, los histogramas revelan que este conjunto de datos contiene un mayor número de muestras que se sitúan fuera de los límites habituales.
-
-Al igual que en el dataset anterior, se observa que hay pocas muestras correspondientes a vinos de alta calidad. Cabe destacar que este análisis sigue siendo univariante, es decir, no considera las relaciones o interacciones entre variables, un aspecto que debería abordarse en futuros análisis.
-
-A pesar de ello, este conjunto de datos cuenta con un número de muestras significativamente mayor, lo que podría permitir obtener resultados más robustos.
-
