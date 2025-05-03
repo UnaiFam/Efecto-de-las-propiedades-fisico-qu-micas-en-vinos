@@ -30,23 +30,25 @@ Para este analisis estudiaremos principalmente el dataset de vino tinto
 ![Image](https://github.com/user-attachments/assets/7c1f6695-fef0-492d-b039-bc89373d40a6)
 ![Image](https://github.com/user-attachments/assets/177f5d28-ee71-4785-a739-af78622f0086)
 
+En el SO2 total tiene un par de valores anomalos. Estos valores se van a eliminar.
 
 Ahora veamos cuales de estas propiedades se relacionan entre si:
 
 ![Image](https://github.com/user-attachments/assets/5357227b-f5f4-43ae-b57a-89f4ec2ec3bd)
 
-* El pH esta relacionado estrechamente con la acidez fija (negativamente),  acidez volatil (positivamente), acido citrico (negativamente) ademas de entre si. Esto tienen mucho sentido ya que son variables que miden acidos. Tambien tiene sentido que esten relacionados poruqe tengan los mismos reacctivos. 
+* El pH está estrechamente relacionado con la acidez fija (de forma negativa), la acidez volátil (positiva) y el ácido cítrico (negativa), además de con otras variables entre sí. Esto tiene mucho sentido, ya que todas están asociadas a compuestos ácidos. También es lógico que estén correlacionadas porque pueden involucrar reactivos comunes.
 
-* Tiene sentido que la densidad este muy relacionada con el contenido de alcohol(ya que el alcohol tiene una densidad menor que el agua), y que el resto de variables aumenten la densidad.
+* También es coherente que la densidad esté muy relacionada con el contenido de alcohol, ya que el alcohol tiene una densidad inferior a la del agua. Por otro lado, la mayoría de las demás sustancias disueltas tienden a incrementar la densidad.
 
-* Tambien tiene sentido que los vino que tengan mas acidos volatiles tengan menos alcohol. Podria ser que que los acidos volatiles no se hayan tranformado al completo se formen a  partir del alchol. Aunque lo mas probabe es que los acidos provienen del alcohol.
+* Es razonable que los vinos con mayor contenido de ácidos volátiles presenten menor concentración de alcohol. Esto podría deberse a que algunos ácidos volátiles se forman a partir del alcohol, o bien que una fermentación incompleta deje más compuestos intermedios.
 
-* Parece que los consumidores valoran especialmente el contenido de alcohol (0.48) y la concentración de ácido cítrico (0.23) en el vino. Además, una mayor concentración de sulfatos (0.25) también se asocia con una mejor calidad percibida.
-Por el contrario, los ácidos volátiles(-0.39) (posiblemnente porque este relacionado con olores desagradables), el SO2 (-0.19)(demasiados conservantes) y una baja densidad(-0.17) (sensacion de "vino aguado" o demasiado fuerte) presentan una correlación negativa con la calidad.
-
+* Parece que los consumidores valoran especialmente un mayor contenido de alcohol y una mayor concentración de ácido cítrico. Además, una concentración elevada de sulfatos también se asocia a una mejor calidad percibida.
+Por el contrario, una mayor presencia de ácidos volátiles (posiblemente por sus aromas desagradables), SO2 (por su asociación con conservantes artificiales), y una baja densidad (que puede dar una sensación de “vino aguado” o excesivamente ligero) están negativamente correlacionadas con la calidad del vino
 
 
 ![Image](https://github.com/user-attachments/assets/7edcb241-01ff-4452-a275-b184efe6615a)
+
+En esta grafica se ven estas correlaciones muy bien en esta grafica, ademas de mostrar las distribuciones de variables.
 
 La acidez volatil, acido citrico, y alcohol tienen las distribuciones mas interesantes, vamos a estudiarlas mas de cerca.
 
@@ -101,6 +103,8 @@ Sin una simplificación de variables, es difícil determinar con certeza hasta q
 
 ### **Estimación de la cocentración optima**
 
+Para asegurarse de que los percentiles son fiables comprobamos si tienen una distribucion normal
+
 
 |                      | statistic  | pvalue        |
 |----------------------|------------|---------------|
@@ -130,18 +134,22 @@ Aunque se puedan calcular los percentiles, al no tener una  una distribucion nor
 |p_100|0.915|0.76|14.0|1.360|
 
 
-
 Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acidez volátil, sulfato y volumen de alcohol se sitúan en torno al percentil 50 tienden a presentar una calidad aceptable.
 
 ---
 ## **Conclusiones** 
 
-Todos los acidos y el pH estan estrechamente relacionado entre si.
+Todos los acidos y el pH estan estrechamente relacionado entre si. Seguramente los acidos tengan rutas de síntesis relacionadas, y el pH mide la acidez.
+
+La densidad esta relacionada con el volumen de alcohol. Esto es porque el alcohol tiene una densidad mas baja que el agua.
+
+Tambien se ha relacionadp que los acidos volatiles estan negativamente relacionados con alcohol. Posiblemente los acidos volatiles se forman a partir de alcohol.
 
 La calidad depende esta relacionada alcohol y la concentración de ácido cítrico en el vino. Además, una mayor concentración de sulfatos también se asocia con una mejor calidad percibida.
-Por el contrario, los ácidos volátiles, el dióxido de azufre (SO₂) y una baja densidad presentan una correlación negativa con la calidad.
+Por el contrario, los ácidos volátiles, el SO2 total y una baja densidad presentan una correlación negativa con la calidad.
 
-Tambien se ha estudiado la concetracion optima de las 4 variables:
+Tambien se ha estudiado la concetracion optima de las 4 variables mas importantes:
+
 * Ácido cítrico
 * Acidez volátil
 * Volumen de alcohol
@@ -151,6 +159,6 @@ Es importante señalar que este análisis solo ha considerado el efecto de tres 
 
 Además, el conjunto de datos, además de ser relativamente antiguo, presenta varias limitaciones: solo contiene datos de una única variante de vino, incluye muy pocos vinos con una calidad superior a 8, dispone de pocas muestras con una calidad de 7 o más, y no contempla otros compuestos relevantes que influyen directamente en el sabor y aroma, como polifenoles, éteres o terpenos.
 
-Estas conclusiones solo se aplicarian a este dataset, ya que por ejemplo en el dataset del vino blanco (mas adelante) se observo diferentes correlaciones (como por ejemplo una mayor importancia en de los cloruros y del SO2 libre y que el acido citrico no tenga impotancia directa)
+Estas conclusiones solo se aplicarian a esta variante del vino, ya que por ejemplo en el dataset del vino blanco (mas adelante) se han observo diferentes correlaciones (como por ejemplo una mayor importancia en de los cloruros y del SO2 libre y que el acido citrico no tenga impotancia directa).
 
 ![Image](https://github.com/user-attachments/assets/227b28ba-1a16-410a-9869-28e204f7204e)
