@@ -101,6 +101,8 @@ Los datos siguen siendo dispersos, pero las tendencias ahora son más claras y n
 
 Sin una simplificación de variables, es difícil determinar con certeza hasta qué punto estas tendencias son reales. Ahora, vamos a estudiar las distribuciones de los datos.
 
+---
+
 ### **Estimación de la cocentración optima**
 
 Para asegurarse de que los percentiles son fiables comprobamos si tienen una distribucion normal
@@ -139,13 +141,13 @@ Podríamos concluir que los vinos cuyas concentraciones de ácido cítrico, acid
 ---
 ## **Conclusiones** 
 
-Todos los acidos y el pH estan estrechamente relacionado entre si. Seguramente los acidos tengan rutas de síntesis relacionadas, y el pH mide la acidez.
+Todos los ácidos y el pH estan estrechamente relacionado entre si. Seguramente los acidos tengan rutas de síntesis relacionadas, y el pH es la varible es la variable que mide la acidez en general.
 
-La densidad esta relacionada con el volumen de alcohol. Esto es porque el alcohol tiene una densidad mas baja que el agua.
+La densidad esta relacionada negativamente con el volumen de alcohol. Esto es porque el alcohol tiene una densidad mas baja que el agua. El resto de compuestos, en cambio, aumentan la densidad.
 
 Tambien se ha relacionadp que los acidos volatiles estan negativamente relacionados con alcohol. Posiblemente los acidos volatiles se forman a partir de alcohol.
 
-La calidad depende esta relacionada alcohol y la concentración de ácido cítrico en el vino. Además, una mayor concentración de sulfatos también se asocia con una mejor calidad percibida.
+La calidad esta relacionada alcohol y la concentración de ácido cítrico en el vino. Además, una mayor concentración de sulfatos también se asocia con una mejor calidad percibida.
 Por el contrario, los ácidos volátiles, el SO2 total y una baja densidad presentan una correlación negativa con la calidad.
 
 Tambien se ha estudiado la concetracion optima de las 4 variables mas importantes:
